@@ -1,11 +1,16 @@
 import React, { Component } from 'react';
+import Hero from '../components/hero.component';
+import About from '../components/about.component';
+import GetStarted from '../components/start.component';
 
-export default class TodosList extends Component {
-    render() {
-        return (
-            <div>
-                <p>Welcome to the Todos List Component!!</p>
-            </div>
-        )
-    }
+function HomePage(props) {
+
+    return (
+        <div>
+            <Hero title={props.title} subTitle={props.subTitle}/>
+            <About />
+            <GetStarted />
+        </div>
+    )
 }
+export default HomePage;
