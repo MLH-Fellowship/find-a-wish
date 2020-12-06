@@ -1,5 +1,5 @@
 <p align="center">
- <h1 align="center">Find-a-Wish</h1>
+ <h1 align="center">:earth_americas: Find-a-Wish! :earth_americas:</h1>
  <h3 align="center">Find an organization you want to grant wishes for!</h3>
 </p>
 <p align="center">
@@ -15,7 +15,7 @@ Organizations can use our web app to publish their profile, which includes which
 
    
    
-##  Get Started
+## :sparkles:Get Started
 
 ### 1. Clone this repo using `git clone`
 
