@@ -58,7 +58,7 @@ Organizations: To Be Implemented! Will add screenshots later
 ## 🔥 Contributing
 Find-a-Wish is fully Open-Source and open for contributions! We request you to respect our contribution guidelines as defined in our [CODE OF CONDUCT](https://github.com/MLH-Fellowship/find-a-wish/blob/main/CODE_OF_CONDUCT.md) and [CONTRIBUTING GUIDELINES](https://github.com/MLH-Fellowship/find-a-wish/blob/main/CONTRIBUTING.md).
 
-
+See our open [issues](https://github.com/MLH-Fellowship/find-a-wish/issues) to get started and contribute!
 
 ## :construction_worker: Contributors
  - [Julia Liu](https://github.com/juliasliu)
