@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import { Button ,Navbar, Nav, NavDropdown, Form, FormControl, Container } from 'react-bootstrap';
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import { Navbar, Nav } from 'react-bootstrap';
 
 import Wishlist from "./components/wishlist.component";
 import EditTodo from "./components/edit-todo.component";

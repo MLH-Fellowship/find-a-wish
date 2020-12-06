@@ -1,5 +1,5 @@
 import React from 'react';
-import { Jumbotron, Button, Container, Row, Col } from 'react-bootstrap';
+import { Jumbotron, Container, Row, Col } from 'react-bootstrap';
 import wishlist from '../images/wishlist-line-icon-vector.jpg';
 import supplies from '../images/supplies.png';
 

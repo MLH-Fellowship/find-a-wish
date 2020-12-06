@@ -1,6 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { useFormik } from 'formik';
+import { useFormik,  } from 'formik';
 import * as yup from 'yup';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
@@ -8,13 +7,32 @@ import { Container, Row, Col, Jumbotron } from 'react-bootstrap';
 
 const validationSchema = yup.object({
     name: yup
-        .string('Enter your password')
-        .min(8, 'Password should be of minimum 8 characters length')
-        .required('Password is required'),
+        .string('Please enter your full name')
+        .min(1, "Too short!")
+        .max(100, "Too long!")
+        .required('Full Name is required'),
     email: yup
-        .string('Enter your email')
+        .string('Please enter a contact email')
         .email('Enter a valid email')
         .required('Email is required'),
+    organization: yup
+        .string('Please enter an organization name')
+        .min(1, "Too short!")
+        .required("Organization name is required"),
+    number: yup
+        .string("Enter a contact number")
+        .matches(
+            /^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/,
+            "Invalid phone number")
+        .required('Contact number is required'),
+    website: yup
+         .string("Please enter your organization website")  
+         .matches(/((https?):\/\/)?(www.)?[a-z0-9-]+(\.[a-z]{2,}){1,3}(#?\/?[a-zA-Z0-9#-]+)*\/?(\?[a-zA-Z0-9-_]+=[a-zA-Z0-9-%]+&?)?$/, 'Invalid url') 
+         .required('Organization website is required'),  
+    items: yup 
+        .string("Please enter the items your organization needs")
+        .min(1, "Not enough items")
+        .required("At least one item is required")
 });
 
 function Wishlist () {
@@ -23,12 +41,13 @@ function Wishlist () {
             name: '',
             email: '',
             organization: '',
-            number: '',
+            number: 'XXX-XXX-XXXX',
             website: '', 
+            items: '',
         },
         validationSchema: validationSchema,
         onSubmit: (values) => {
-            alert(JSON.stringify(values, null, 2));
+            console.log(values);
         },
     });
     const jumb_styles = {
@@ -53,8 +72,8 @@ function Wishlist () {
                             type="name"
                             value={formik.values.name}
                             onChange={formik.handleChange}
-                            /*error={formik.touched.password && Boolean(formik.errors.password)}*/
-                            /*helperText={formik.touched.password && formik.errors.password}*/
+                            error={formik.touched.name && Boolean(formik.errors.name)}
+                            helperText={formik.touched.name && formik.errors.name}
                         />
                         <TextField
                             fullWidth
@@ -71,39 +90,46 @@ function Wishlist () {
                             id="organization"
                             name="organization"
                             label="Organization"
-                            /*type="name"*/
                             value={formik.values.organization}
                             onChange={formik.handleChange}
-                            /*error={formik.touched.password && Boolean(formik.errors.password)}*/
-                            /*helperText={formik.touched.password && formik.errors.password}*/
+                            error={formik.touched.organization && Boolean(formik.errors.organization)}
+                            helperText={formik.touched.organization && formik.errors.organization}
                         />
                         <TextField
                             fullWidth
                             id="number"
                             name="number"
                             label="Number to Contact"
-                            /*type="name"*/
                             value={formik.values.number}
                             onChange={formik.handleChange}
-                            /*error={formik.touched.password && Boolean(formik.errors.password)}*/
-                            /*helperText={formik.touched.password && formik.errors.password}*/
+                            error={formik.touched.number && Boolean(formik.errors.number)}
+                            helperText={formik.touched.number && formik.errors.number}
                         />
                         <TextField
                             fullWidth
                             id="website"
                             name="website"
                             label="Website"
-                            /*type="name"*/
                             value={formik.values.website}
                             onChange={formik.handleChange}
-                            /*error={formik.touched.password && Boolean(formik.errors.password)}*/
-                            /*helperText={formik.touched.password && formik.errors.password}*/
+                            error={formik.touched.website && Boolean(formik.errors.website)}
+                            helperText={formik.touched.website && formik.errors.website}
+                        />
+                        <TextField
+                            fullWidth
+                            id="items"
+                            name="items"
+                            label="Items Needed"
+                            value={formik.values.items}
+                            onChange={formik.handleChange}
+                            error={formik.touched.items && Boolean(formik.errors.items)}
+                            helperText={formik.touched.items && formik.errors.items}
                         />
                         <div className="text-center mt-3">
                             <Button color="primary" variant="contained" type="submit" className="mr-3">
                                 Submit
                             </Button>
-                            <Button color="primary" variant="contained" type="reset">
+                            <Button color="primary" variant="contained" type="reset" onClick={formik.handleReset}>
                                 Reset
                             </Button>
                         </div>
