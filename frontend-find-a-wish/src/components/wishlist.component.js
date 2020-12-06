@@ -1,10 +1,11 @@
 import React from 'react';
-import { useFormik,  } from 'formik';
+import { useFormik } from 'formik';
 import * as yup from 'yup';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import { Container, Row, Col, Jumbotron } from 'react-bootstrap';
 
+/* Schema for validating all form inputs by user */
 const validationSchema = yup.object({
     name: yup
         .string('Please enter your full name')
@@ -36,6 +37,7 @@ const validationSchema = yup.object({
 });
 
 function Wishlist () {
+    /* Initialize empty values and formats in form */
     const formik = useFormik({
         initialValues: {
             name: '',
@@ -46,15 +48,18 @@ function Wishlist () {
             items: '',
         },
         validationSchema: validationSchema,
+        /* Log values on console for now */
         onSubmit: (values) => {
             console.log(values);
         },
     });
+    /* Style to make purple jumbotron cover entire view */
     const jumb_styles = {
         backgroundImage: 'URL("https://digitalsynopsis.com/wp-content/uploads/2017/02/beautiful-color-gradients-backgrounds-028-plum-plate.png")',
         backgroundSize: 'cover',
     };
 
+  /* Form and jumbotron background */
   return (
     <Jumbotron fluid style={jumb_styles} className="vh-100">
         <Container fluid>

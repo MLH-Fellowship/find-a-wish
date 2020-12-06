@@ -5,9 +5,11 @@ import supplies from '../images/supplies.png';
 
 
 function About() {
+    /* Make jumbotron transparent */
     const aboutStyles = {
         background: 'transparent',
     }
+    /* Information about Find a Wish */
     return (
         <Jumbotron fluid style={aboutStyles}>
             <Container fluid>
