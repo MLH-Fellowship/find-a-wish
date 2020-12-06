@@ -51,7 +51,6 @@ Organizations: To Be Implemented! Will add screenshots later
 ## :whale: Deployment: Sprint 5 Engineering Focus
 
 ### TBD: Issue open for it
-### Will possibly Dockerize this web application
 
 
 
