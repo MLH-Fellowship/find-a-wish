@@ -5,10 +5,10 @@ import logo from '../images/earth_heart_logo.png';
 function Hero(props) {
     const jumb_styles = {
         backgroundImage: 'URL("https://digitalsynopsis.com/wp-content/uploads/2017/02/beautiful-color-gradients-backgrounds-028-plum-plate.png")',
-        backgroundSize: 'cover'
+        backgroundSize: 'cover',
     };
     return (
-        <Jumbotron fluid style={jumb_styles}>
+        <Jumbotron fluid style={jumb_styles} className="mb-0">
             <Container fluid>
                 <Row className="justify-content-center px-5 align-items-center">
                     <Col md={8} sm={12} lg={6} className="py-5">
@@ -20,7 +20,7 @@ function Hero(props) {
                         </p>
                     </Col>
                     <Col lg={6}>
-                        <img src={logo} alt="Logo"></img>
+                        <img src={logo} alt="Logo" style={{ height: '770x', width: '660px' }}></img>
                     </Col>
                 </Row>
             </Container>

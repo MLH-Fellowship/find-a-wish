@@ -12,14 +12,17 @@ function GetStarted() {
                 <Row className="justify-content-center align-items-center">
                     <Col lg={3}></Col>
                     <Col lg={6} className="py-5">
-                        <h1 className="text-light text-center">Log in or sign up to give back today!</h1>
+                        <h1 className="text-light text-center">Organization or Donator?</h1>
+                        <br></br>
+                        <h3 className="text-light text-center">If you are an organization, get started by posting a wishlist. If you are a donator, browse the various wishlists and organizations!</h3>
+                        <br></br>
                         <br></br>
                         <p className="lead text-center" style={{textAlign: 'center'}}>
-                            <Button variant="light" href="/signup" className="btn btn-lg" style={{display: 'inline-block'}}>Log In</Button>
+                            <Button variant="light" href="/signup" className="btn btn-lg" style={{display: 'inline-block'}}>Organizations</Button>
                             <br></br>
                         </p>
                         <p className="lead text-center" style={{textAlign: 'center'}}>
-                            <Button variant="light" href="/signup" className="btn btn-lg" style={{display: 'inline-block'}}>Sign Up</Button>
+                            <Button variant="light" href="/signup" className="btn btn-lg" style={{display: 'inline-block'}}>Post a Wishlist</Button>
                         </p>
                     </Col>
                     <Col lg={3}></Col>
