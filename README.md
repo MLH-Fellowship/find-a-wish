@@ -17,7 +17,7 @@ Organizations can use our web app to publish their profile, which includes which
    
 ## :sparkles:Get Started
 
-### 1. Clone this repo using `git clone`
+### 1. Clone this repo using `git clone` and `cd ~/find-a-wish/frontend-find-a-wish`
 
 ### 2. Install npm packages(make sure you have npm installed).
 `npm install`
@@ -37,8 +37,8 @@ Home Page: Where the user will be able to see the details about Find-a-Wish and 
 Wishlist: Where Organizations will be able to put in their information and wishlists for other good Samaritans to help out with:
 <img width="1440" alt="Screen Shot 2020-12-06 at 2 50 57 PM" src="https://user-images.githubusercontent.com/51776663/101295512-e2a42480-37d2-11eb-96fc-6406fd0e1628.png">
 
-Organizations: To Be Implemented! Will add screenshots later
-
+Organizations: Here, the user and the wishlist poster will be able to see all of the organization profiles with their wishlists. You can find a wish to grant here!
+<img width="1440" alt="Screen Shot 2020-12-06 at 6 10 35 PM" src="https://user-images.githubusercontent.com/51776663/101301669-61f32180-37ee-11eb-925d-6ed8e47d0b77.png">
 
 
 ## :computer: Tech Stack:
@@ -50,7 +50,7 @@ Organizations: To Be Implemented! Will add screenshots later
 
 ## :whale: Deployment: Sprint 5 Engineering Focus
 
-### TBD: Issue open for it
+ TBD: Issue open for it
 
 
 
