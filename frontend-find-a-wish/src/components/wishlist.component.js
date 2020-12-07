@@ -20,6 +20,10 @@ const validationSchema = yup.object({
         .string('Please enter an organization name')
         .min(1, "Too short!")
         .required("Organization name is required"),
+    organizationType: yup
+        .string('Please enter an organization type')
+        .min(1, "Too short!")
+        .required("Organization type is required"),
     number: yup
         .string("Enter a contact number")
         .matches(
@@ -43,6 +47,7 @@ function Wishlist () {
             name: '',
             email: '',
             organization: '',
+            organizationType: '',
             number: 'XXX-XXX-XXXX',
             website: '', 
             items: '',
@@ -99,6 +104,16 @@ function Wishlist () {
                             onChange={formik.handleChange}
                             error={formik.touched.organization && Boolean(formik.errors.organization)}
                             helperText={formik.touched.organization && formik.errors.organization}
+                        />
+                        <TextField
+                            fullWidth
+                            id="organizationType"
+                            name="organizationType"
+                            label="Organization Type"
+                            value={formik.values.organizationType}
+                            onChange={formik.handleChange}
+                            error={formik.touched.organizationType && Boolean(formik.errors.organizationType)}
+                            helperText={formik.touched.organizationType && formik.errors.organizationType}
                         />
                         <TextField
                             fullWidth
