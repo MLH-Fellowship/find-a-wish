@@ -16,7 +16,17 @@ const PostsData = [
         "contactNumber": "858-645-6562",
         "website": "animalcenter.org",
         "items": "dog food, blankets",
-        "image": "https://source.unsplash.com/user/erondu/600x400"
+        "image": "https://images.unsplash.com/photo-1534361960057-19889db9621e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80"
+    },
+    {
+        "type": "Youth Education",
+        "organization": "Children's Discovery Museum in San Jose",
+        "poster": "Daniel Enrique",
+        "contactEmail": "daniel@discoverymuseum.com",
+        "contactNumber": "134-845-8457",
+        "website": "discoverymuseum.com",
+        "items": "donations",
+        "image": "https://images.unsplash.com/photo-1518998053901-5348d3961a04?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2767&q=80"
     },
 ]
 class Profile extends React.Component { 
@@ -38,17 +48,12 @@ class Profile extends React.Component {
         <Jumbotron fluid style={jumb_styles} className="vh-100">    
           { /*<header className="profile-header">Organizations</header> */ }
             <h1 className="display-3 font-weight-bolder text-light text-center mt-0">Organizations</h1>
-            <Row>
-                <Col lg={1}></Col>
-                <Col lg={3}>
-                    <div className="app-card-list" id="app-card-list">
-                        {
-                            Object
-                                .keys(this.state.posts)
-                                .map(key => <Card key={key} index={key} details={this.state.posts[key]}/>)
-                        }
-                    </div>
-                </Col>
+            <Row className="app-card-list flex-row px-4" id="app-card-list">
+              {
+                Object
+                    .keys(this.state.posts)
+                    .map(key => <Card key={key} index={key} details={this.state.posts[key]}/>)
+              }
             </Row>
         </Jumbotron>)
     }
@@ -85,7 +90,10 @@ class Profile extends React.Component {
     render() {
       const { image, type } = this.props;
       var style = { 
-          backgroundImage: 'url(' + image + ')',
+          background: 'linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(' + image + ')',
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+          backgroundPosition: "0 50%",
       };
       return (
         <header style={style} className="card-header text-light">
@@ -119,7 +127,7 @@ class Profile extends React.Component {
   class Card extends React.Component {
     render() {
       return (
-        <article className="card">
+        <article className="card col-lg-4 px-0 mx-4 my-4">
           <CardHeader type={this.props.details.type} image={this.props.details.image}/>
           <CardBody organization={this.props.details.organization} website={this.props.details.website} poster={this.props.details.poster} 
           contactNumber={this.props.details.contactNumber} contactEmail={this.props.details.contactEmail} items={this.props.details.items}/>
