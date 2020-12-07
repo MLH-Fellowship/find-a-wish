@@ -1,7 +1,6 @@
 import React from 'react';
 import { Jumbotron, Button, Container, Row, Col } from 'react-bootstrap';
 import logo from '../images/earth_heart_logo.png';
-import { forwardRef, useRef } from 'react';
 
 function Hero(props) {
     /* Style to make purple jumbotron cover entire view */

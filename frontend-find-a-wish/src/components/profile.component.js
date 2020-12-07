@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Row, Col, Jumbotron } from 'react-bootstrap';
+import { Row, Col, Jumbotron } from 'react-bootstrap';
 /*import '../profile.css';*/
 const jumb_styles = {
     backgroundImage: 'URL("https://digitalsynopsis.com/wp-content/uploads/2017/02/beautiful-color-gradients-backgrounds-028-plum-plate.png")',
@@ -55,7 +55,7 @@ class Profile extends React.Component {
 }
 
    
-{ /*class Title extends React.Component {
+/*class Title extends React.Component {
     render() {
         return <section className="app-title">
             <div className="app-title-content">
@@ -65,12 +65,12 @@ class Profile extends React.Component {
             </div>
         </section>
     }
-} */ } 
+} */  
 
     
 
 
-  { /*class Button extends React.Component {
+ /*class Button extends React.Component {
     render() {
       return (
         <button className="button button-primary">
@@ -78,7 +78,7 @@ class Profile extends React.Component {
         </button>
       )
     }
-  } */ }
+  } */ 
   
   
   class CardHeader extends React.Component {
