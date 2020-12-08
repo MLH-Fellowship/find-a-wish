@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.js": "/static/js/main.64632e48.chunk.js",
+    "main.js.map": "/static/js/main.64632e48.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.109dde50.js",
+    "runtime-main.js.map": "/static/js/runtime-main.109dde50.js.map",
+    "static/css/2.1a02f21c.chunk.css": "/static/css/2.1a02f21c.chunk.css",
+    "static/js/2.9672816f.chunk.js": "/static/js/2.9672816f.chunk.js",
+    "static/js/2.9672816f.chunk.js.map": "/static/js/2.9672816f.chunk.js.map",
+    "static/js/3.914581b0.chunk.js": "/static/js/3.914581b0.chunk.js",
+    "static/js/3.914581b0.chunk.js.map": "/static/js/3.914581b0.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.1a02f21c.chunk.css.map": "/static/css/2.1a02f21c.chunk.css.map",
+    "static/js/2.9672816f.chunk.js.LICENSE.txt": "/static/js/2.9672816f.chunk.js.LICENSE.txt",
+    "static/media/earth_heart_logo.a94bcb77.png": "/static/media/earth_heart_logo.a94bcb77.png",
+    "static/media/wishlist-line-icon-vector.c2021aa5.jpg": "/static/media/wishlist-line-icon-vector.c2021aa5.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.109dde50.js",
+    "static/css/2.1a02f21c.chunk.css",
+    "static/js/2.9672816f.chunk.js",
+    "static/js/main.64632e48.chunk.js"
+  ]
+}
