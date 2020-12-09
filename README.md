@@ -16,7 +16,7 @@ Organizations can use our web app to publish their profile, which includes which
 
 ## :whale: Deployment: Sprint 5 Engineering Focus
 
-You can find this web app deployed at [find-a-wish.onrender.com](find-a-wish.onrender.com).
+You can find this web app deployed at [find-a-wish.onrender.com](https://find-a-wish.onrender.com/).
 
    
 
